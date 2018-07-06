@@ -53,3 +53,34 @@ Most of what follows is based on these Tutorials and amalgmating pieces of each
   - Set the Skybox Material (i use Cope)
 
 ## Walking
+
+###First Person View
+
+Add the 3 scripts below to the 
+
+- ./Assets/Scripts/VRLookWalk.cs
+- ./Assets/Scripts/VRAutoWalkLookDown.cs
+- ./Assets/Scripts/VRLookWalkKeyboard.cs
+- ./Assets/Scripts/VRLookWalkMagneticClick.cs
+
+### Third Person View
+
+This is the one most people will be interested in - ** controlling a Character with head movement **
+
+- Create a new Scene as above but stop at the **Create Player** stage
+- Goto ```Assets >Import Package >Characters```
+- Drag the new asset ```Standard Assets/Characters/ThirdPersonCharacter/Prefabs/ThirdPersonController``` to the scene (His name is Ethan apparently)
+- Click the ThirdPersonController and uncheck the ```Third Person User Control (Script)```
+  - We don't want to use this locomotion, we'll write out own and bind it to the ThirdPersonController
+- Create an Empty Object and call it CameraCradle - drag it to the ThirdPersonController
+- Drag the Main Camera to the CameraCradle
+- In the Scene View, align the view to Ethan, then Menu>Game Object>Align With Viwe
+  - This will match the Camera to the position you have the scene in, and will stick it there as it's a child object 
+- Add this script to the MainCamera [ThirdPersonVRController](./Assets/Scripts/ThirdPersonVRController.cs) 
+- Finally, there is a public property **Character** on the script above. Select the MainCamera in the Hierarchy View, and you will see it in the Inspector window. 
+  then from the Hierarchy View drag the ThirdPersonController to the Character property in the Inspector Window - binding it to the script.
+- Hit Play, and you should be controlling Ethan with slight head motion.
+- Play around with the script and you can make the motion smoother.
+
+
+
