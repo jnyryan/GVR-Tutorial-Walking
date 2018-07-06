@@ -57,7 +57,7 @@ Most of what follows is based on these Tutorials and amalgmating pieces of each
   - Goto ```Assets >Import Package >Environment```
   - Goto Inspector > Click paint brush > Edit Textures
 
--- Create Skybox
+- Create Skybox
   - Goto ```Window > Lighting > Settings```
   - Set the Skybox Material (i use Cope)
 
@@ -71,6 +71,8 @@ Add the 3 scripts below to the
 - [VRAutoWalkLookDown](./Assets/Scripts/VRAutoWalkLookDown.cs)
 - [VRLookWalkKeyboard](./Assets/Scripts/VRLookWalkKeyboard.cs)
 - [VRLookWalkMagneticClick](./Assets/Scripts/VRLookWalkMagneticClick.cs)
+
+Only check one of these at a time to test them all out.
 
 ### Third Person View
 
