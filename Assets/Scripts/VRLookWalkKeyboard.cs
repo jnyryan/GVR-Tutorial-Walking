@@ -18,9 +18,16 @@ public class VRLookWalkKeyboard: MonoBehaviour
 
     void Update()
     {
-        cameraTransform.Rotate(0, Input.GetAxis("Horizontal") * rotateSpeed, 0);
+        // read inputs
+        var x = Input.GetAxis("Horizontal");
+        var z = Input.GetAxis("Vertical");
+        // Move Left/Right
+        characterController.transform.Rotate(0, x, 0);
+
+        // Move forward/backward
+        float curSpeed = speed * z;
         Vector3 forward = cameraTransform.TransformDirection(Vector3.forward);
-        float curSpeed = speed * Input.GetAxis("Vertical");
         characterController.SimpleMove(forward * curSpeed);
+       
     }
 }
