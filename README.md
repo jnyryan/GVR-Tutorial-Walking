@@ -5,7 +5,7 @@ With Google Virtual Reality here's 2 things we're going to achieve
 - Move around a scene using a Google Cardboard VR kit in the First Person
 - Create a Character and control its motion in a Chase view with the Cardboard Headset
 
-[Screenshot](!./ScreenShots/ThirdPersonTracking.png)
+![Screenshot](./ScreenShots/ThirdPersonTracking.png)
 
 ## References and shoutouts
 
@@ -57,13 +57,13 @@ Most of what follows is based on these Tutorials and amalgmating pieces of each
   - Goto ```Assets >Import Package >Environment```
   - Goto Inspector > Click paint brush > Edit Textures
 
--- Create Skybox
+- Create Skybox
   - Goto ```Window > Lighting > Settings```
   - Set the Skybox Material (i use Cope)
 
 ## Walking
 
-###First Person View
+### First Person View
 
 Add the 3 scripts below to the 
 
@@ -71,6 +71,8 @@ Add the 3 scripts below to the
 - [VRAutoWalkLookDown](./Assets/Scripts/VRAutoWalkLookDown.cs)
 - [VRLookWalkKeyboard](./Assets/Scripts/VRLookWalkKeyboard.cs)
 - [VRLookWalkMagneticClick](./Assets/Scripts/VRLookWalkMagneticClick.cs)
+
+Only check one of these at a time to test them all out.
 
 ### Third Person View
 
