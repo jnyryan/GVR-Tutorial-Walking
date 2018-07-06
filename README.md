@@ -63,7 +63,7 @@ Most of what follows is based on these Tutorials and amalgmating pieces of each
 
 ## Walking
 
-###First Person View
+### First Person View
 
 Add the 3 scripts below to the 
 
