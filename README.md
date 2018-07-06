@@ -1,18 +1,25 @@
-# GVR-Tutorial1-Camera-On-Terrain
+# GVR Tutorial Walking
 
-With Google Virtual Reality - We're going to create a scene with terrain and a skybox
+With Google Virtual Reality here's 2 things we're going to achieve
 
+- Move around a scene using a Google Cardboard VR kit in the First Person
+- Create a Character and control its motion in a Chase view with the Cardboard Headset
+
+## References and shoutouts
+
+I'm a n00b to Unity and VR, and it took me about a week to figure this out. 
 Most of what follows is based on these Tutorials and amalgmating pieces of each
 
 - [Movement In Mobile VR: Autowalk by NurFACEGAMES](https://www.youtube.com/watch?v=JmgOeQ3Gric) - Character Control using CaharacterController
 - [Movement In Mobile VR: Look Walk by NurFACEGAMES](https://www.youtube.com/watch?v=kBTn2pGwZUk) - Walking
 - [Creating a Google Cardboard VR app in Unity 2017 by Rabidgremlin](https://www.youtube.com/watch?v=EAaoEe9ksyE) - Object interaction
 - [Unity 3D - How to make your First Terrain (Beginner Tutorial) By DEYEmaginary](https://www.youtube.com/watch?v=WMBsdhELSwE)
+
 ## Setup
 
-- Install Unity
-- Install [Google VR SDK](https://developers.google.com/vr/develop/unity/get-started-ios)
-- Create Demo Project to verify it all works
+- Install Unity (I'm using 2018.1.5f1 Personal)
+- Install [Google VR SDK](https://developers.google.com/vr/develop/unity/get-started-ios) (I'm using GoogleVRForUnity_1.130.1)
+- Create Demo Project to verify it all works by following the instructions above.
 - Additional setting
   - Under Resolution and Presentation, uncheck all except ***Landscape Left***, this fixes a bug in the GVR SDK
 
@@ -23,11 +30,11 @@ Most of what follows is based on these Tutorials and amalgmating pieces of each
   - GvrEditorEmulator
   - GvrControllerMain
   - GvrEventSystem
-  - GvrRecticlePointer (add to camera)
-  - GvrPointerPhysicsRayCaster (add to camera)
+  - GvrRecticlePointer (add to MainCamera)
+  - GvrPointerPhysicsRayCaster (add to MainCamera)
 
 - Create a Player
-  - Create ```GameObject > Empty Object``` and rename to Player
+  - Create ```Menu>GameObject > Empty Object``` and rename to Player
   - On the Player Object add a CharacterComponent
   - Drag main camera to Player
   - Select Camera and right click on transform and click reset
@@ -36,7 +43,7 @@ Most of what follows is based on these Tutorials and amalgmating pieces of each
 
 - Create some interaction
   - Create ```GameObject > 3d Object > Cube```
-  - Create a script that contains some [behaviour](/....)
+  - Create a script that contains some [behaviour](./Assets/Scripts/VRLookWalk.cs)
   - Add component EventTrigger
     - allows the raycaster to detect it
   - Add a script
@@ -58,10 +65,10 @@ Most of what follows is based on these Tutorials and amalgmating pieces of each
 
 Add the 3 scripts below to the 
 
-- ./Assets/Scripts/VRLookWalk.cs
-- ./Assets/Scripts/VRAutoWalkLookDown.cs
-- ./Assets/Scripts/VRLookWalkKeyboard.cs
-- ./Assets/Scripts/VRLookWalkMagneticClick.cs
+- [VRLookWalk](./Assets/Scripts/VRLookWalk.cs)
+- [VRAutoWalkLookDown](./Assets/Scripts/VRAutoWalkLookDown.cs)
+- [VRLookWalkKeyboard](./Assets/Scripts/VRLookWalkKeyboard.cs)
+- [VRLookWalkMagneticClick](./Assets/Scripts/VRLookWalkMagneticClick.cs)
 
 ### Third Person View
 
