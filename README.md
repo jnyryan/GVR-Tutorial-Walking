@@ -5,6 +5,8 @@ With Google Virtual Reality here's 2 things we're going to achieve
 - Move around a scene using a Google Cardboard VR kit in the First Person
 - Create a Character and control its motion in a Chase view with the Cardboard Headset
 
+[Screenshot](!./ScreenShots/ThirdPersonTracking.png)
+
 ## References and shoutouts
 
 I'm a n00b to Unity and VR, and it took me about a week to figure this out. 
