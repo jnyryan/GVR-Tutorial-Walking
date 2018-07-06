@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class spinCube : MonoBehaviour {
+public class SpinCube : MonoBehaviour {
 
 
     public float spinValue = 90;
